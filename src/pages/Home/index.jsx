@@ -42,7 +42,8 @@ export function Home() {
       </button>
 
       {students.map(student => (
-        <Card name={student.name} time={student.time} />
+        //foi idicionado a "key={student.time}" para evitar bugs, pois caso haja um estudando com o mesmo nome vai gerar erro.
+        <Card key={student.time} name={student.name} time={student.time} />
       ))}
     </div>
   )
