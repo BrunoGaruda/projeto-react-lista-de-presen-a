@@ -1,10 +1,11 @@
 import './styles.css'
 
-export function Card() {
+// Através de pros conseguimos acessar as propriedades do "Home"
+export function Card(props) {
   return (
-    <div>
-      <strong>Bruno Almeida</strong>
-      <small>10:15:23</small>
+    <div className="card">
+      <strong>{props.name}</strong>
+      <small>{props.time}</small>
     </div>
   )
 }
