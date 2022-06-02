@@ -1,4 +1,4 @@
-import React, { useState } from 'react' // Necessário a (hook = useState) importação para refletir a "let" na interface
+import React, { useState, useEffect } from 'react' // Necessário a (hook = useState) importação para refletir a "let" na interface
 import './styles.css'
 
 import { Card } from '../../components/Card'
@@ -7,6 +7,7 @@ import { Card } from '../../components/Card'
 export function Home() {
   const [studentName, setstudentName] = useState()
   const [students, setStudents] = useState([])
+  const [user, setUser] = useState([{ name: '', avatar: '' }])
 
   //Vai ser criado um novo objeto adicionado o nome pegando do estado no condeúdo do  input e o time no horário atual "toLocaleDateString"
   function handleAddStudent() {
@@ -27,14 +28,53 @@ export function Home() {
   function handleNameChange(name) {
     studentName = name
   }
+
+  var test = 'BrunoGaruda'
+  const api = `https://api.github.com/users/`
+  var url = api + test
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(url)
+      const data = await response.json()
+      console.log('dados ==>', data)
+
+      setUser({
+        name: data.name,
+        avatar: data.avatar_url
+      })
+    }
+    fetchData()
+  }, [])
+
+  // useEffect(() => {
+  //   //corpo do useEffect. É executado assim que a interface é renderizada
+  //   fetch(`https://api.github.com/users/` + `BrunoGaruda`)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setUser({
+  //         name: data.name,
+  //         avatar: data.avatar_url
+  //       })
+  //     })
+  // }, [])
+
   //Tag JSX precisa ser "embrulhada" para nao dar erro. <> </> ou uma <div>
   return (
     <div className="container">
-      <h1>Lista de Presença</h1>
+      <header>
+        <h1>Lista de Presença</h1>
+        <div>
+          <strong>{user.name}</strong>
+          <img src={user.avatar} alt="Foto de Perfil" />
+        </div>
+      </header>
+
       <input
         type="text"
         placeholder="Digite o nome..."
         //Pegando o conteúdo atual do input e atualizando o estado com setstudentName
+        // onChange={e => setUser(e.target.value)}
         onChange={e => setstudentName(e.target.value)}
       />
       <button type="button" onClick={handleAddStudent}>
