@@ -5,7 +5,7 @@ import { Card } from '../../components/Card'
 
 //Numa estrutura jsx você tem uma função que retorna o conteúdo HTML pra ser renderizado
 export function Home() {
-  const [studentName, setstudentName] = useState()
+  const [studentName, setStudentName] = useState()
   const [students, setStudents] = useState([])
   const [user, setUser] = useState([{ name: '', avatar: '' }])
 
@@ -25,10 +25,6 @@ export function Home() {
     setStudents(prevState => [...prevState, newStudent])
   }
 
-  function handleNameChange(name) {
-    studentName = name
-  }
-
   var test = 'BrunoGaruda'
   const api = `https://api.github.com/users/`
   var url = api + test
@@ -37,7 +33,6 @@ export function Home() {
     async function fetchData() {
       const response = await fetch(url)
       const data = await response.json()
-      console.log('dados ==>', data)
 
       setUser({
         name: data.name,
@@ -47,44 +42,37 @@ export function Home() {
     fetchData()
   }, [])
 
-  // useEffect(() => {
-  //   //corpo do useEffect. É executado assim que a interface é renderizada
-  //   fetch(`https://api.github.com/users/` + `BrunoGaruda`)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setUser({
-  //         name: data.name,
-  //         avatar: data.avatar_url
-  //       })
-  //     })
-  // }, [])
-
   //Tag JSX precisa ser "embrulhada" para nao dar erro. <> </> ou uma <div>
   return (
     <div className="container">
       <header>
-        <h1>Lista de Presença</h1>
+        <h1>
+          Evento: Codando em 2022 <h4>ás 20h</h4>
+        </h1>
         <div>
-          <strong>{user.name}</strong>
+          <strong>
+            <h4>Autor</h4> <h2>{user.name}</h2>
+          </strong>
           <img src={user.avatar} alt="Foto de Perfil" />
         </div>
       </header>
 
       <input
         type="text"
-        placeholder="Digite o nome..."
+        placeholder="Digite o seu GitHub..."
         //Pegando o conteúdo atual do input e atualizando o estado com setstudentName
-        // onChange={e => setUser(e.target.value)}
-        onChange={e => setstudentName(e.target.value)}
+        onChange={e => setStudentName(e.target.value)}
       />
       <button type="button" onClick={handleAddStudent}>
-        Adicionar
+        Participar
       </button>
 
-      {students.map(student => (
-        //foi idicionado a "key={student.time}" para evitar bugs, pois caso haja um estudando com o mesmo nome vai gerar erro.
-        <Card key={student.time} name={student.name} time={student.time} />
-      ))}
+      <div className="students_container">
+        {students.map(student => (
+          //foi idicionado a "key={student.time}" para evitar bugs, pois caso haja um estudando com o mesmo nome vai gerar erro.
+          <Card key={student.time} name={student.name} time={student.time} />
+        ))}
+      </div>
     </div>
   )
 }
