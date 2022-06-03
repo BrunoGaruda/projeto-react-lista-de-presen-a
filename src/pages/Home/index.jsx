@@ -25,9 +25,9 @@ export function Home() {
     setStudents(prevState => [...prevState, newStudent])
   }
 
-  var test = 'BrunoGaruda'
-  const api = `https://api.github.com/users/`
-  var url = api + test
+  // var test = 'BrunoGaruda'
+  const url = `https://api.github.com/users/BrunoGaruda`
+  // var url = api + test
 
   useEffect(() => {
     async function fetchData() {
