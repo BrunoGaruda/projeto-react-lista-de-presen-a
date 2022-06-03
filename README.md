@@ -1,4 +1,4 @@
-<!-- # Modelo de Evento ou Lista de presença com React
+# Modelo de Evento ou Lista de presença com React
 
 ## Conteúdo
 
@@ -6,7 +6,7 @@
   - [Desafio](#desafio)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [Processo de Criação](#processo-de-criação)
+  - [Processo de Criação](#processo-de-criação)
   - [Construído com](#construído-com)
   - [Aprendizado](#aprendizado)
 - [Autor](#autor)
@@ -22,15 +22,15 @@ O maior desafio desse projeto conhecer e realizá-lo com o framework [React.js](
 ### Screenshot
 
 <div style="display: inline-block"  align="center"><br>
-    <img height="250em" src="./src/assets/project_img01.PNG" align="center" alt="Imagem do projeto versão Desktop" >
-   <img height="250em" src="./src/assets/project_img02.PNG" align="center" alt="Imagem do projeto versão Mobile" >
-   <img height="250em" src="./src/assets/project_img03.PNG" align="center" alt="Imagem do vilão Va Cowboy" >
+   <img height="250em" src="./src/assets/rosto.png" align="center" alt="Capa do projeto" > <br><br><br>
+   <img height="250em" src="./src/assets/lista-de-presença.gif" align="center" alt="desenvolvimento da aplicação" >
+  
   <br><br>
 </div>
 
 ### Links
 
-- URL para o Site: [Super Velho Oeste](https://vue-super-velho-oeste.vercel.app/)
+- URL para o Site: [Lista de presença](https://projeto-react-lista-de-presen-a.vercel.app/)
 
 ## Processo de Criação
 
@@ -54,12 +54,11 @@ Ao usar o Vue.js, eu também acho que pude melhorar meu entendimento de React.js
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/rafael99ldm/">
-        <img src="https://github.com/RafaZeero.png" width="100px;" alt="Foto de Rafael Lima do GitHub"/><br>
+        <img src="https://github.com/BrunoGaruda.png" width="100px;" alt="Foto de Bruno Almeida do GitHub"/><br>
         <sub>
-          <b>Rafael Lima</b>
+          <b>Bruno Almeida</b>
         </sub>
       </a>
     </td>
   </tr>
 </table>
- -->
