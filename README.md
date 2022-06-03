@@ -4,7 +4,7 @@
 
 - [Projeto](#projeto)
   - [Desafio](#desafio)
-  - [Screenshot](#screenshot)
+  - [Video](#video)
   - [Links](#links)
   - [Processo de Criação](#processo-de-criação)
   - [Construído com](#construído-com)
@@ -19,11 +19,11 @@ Esse projeto consiste em criar uma lista interativa criando um Cartão de presen
 
 O maior desafio desse projeto conhecer e realizá-lo com o framework [React.js](https://reactjs.org/) como primeiro projeto. Utilizei meu HTML, CSS, Javascript de forma diferente nesse projeto.
 
-### Screenshot
+### Video
 
 <div style="display: inline-block"  align="center"><br>
-   <img height="250em" src="./src/assets/rosto.png" align="center" alt="Capa do projeto" > <br><br><br>
-   <img height="250em" src="./src/assets/lista-de-presença.gif" align="center" alt="desenvolvimento da aplicação" >
+   <!-- <img height="150em" src="./src/assets/rosto.png" align="center" alt="Capa do projeto" > <br><br><br> -->
+   <img height="600em" src="./src/assets/lista-de-presença.gif" align="center" alt="desenvolvimento da aplicação" >
   
   <br><br>
 </div>
@@ -36,17 +36,25 @@ O maior desafio desse projeto conhecer e realizá-lo com o framework [React.js](
 
 ### Construído com
 
-- HTML Semântico
-- CSS Customizado
-- Flexbox
-- Modais
-- Mobile-first
-- [Vue.js](https://vuejs.org/)
+- HTML Construido em JavaScript(JSX)
+- CSS Estilizando componentes separadamente
+- React
+  - Hooks, useState, Api do GitHub
+- Javascript
+  - Fecth, async - await, função Date().toLocaleDateString
 
 ### Aprendizado
 
-O aprendizado para este projeto foi enorme. O framework é bem parecido com o React.js, entretanto, a forma como ele usa props, importa e utiliza componentes e o layout do código foi bastante diferente e exigiu um bom tempo quebrando a cabeça e resolvendo alguns bugs.
-Ao usar o Vue.js, eu também acho que pude melhorar meu entendimento de React.js, pois compreendi o uso de algumas funcionalidades do Vue que podem ser também aplicadas ao React de forma parecida e isso expandiu minha visão sobre ambos os frameworks.
+O projeto consiste em uma aplicação React utilizando o Vite ao inivés de por padrão utilizar o "create-react-app".
+
+```
+npm create vite@latest <nome do projeto>
+cd <nome do projeto>
+npm install <criação da pasta node_modules>
+npm run dev
+```
+
+O aprendizado consiste em desenvolver um projeto react desde a criação ao deploy, utilizando todos estes conteúdos base: propriedades, estado, como desenvolver utilizando componentilização, estilização, hooks (useState, useEffect), imutabilidade, entender o funcionamento e o comportamento de aplicações react.
 
 ## Autor
 
