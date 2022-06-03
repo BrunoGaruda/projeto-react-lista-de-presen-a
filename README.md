@@ -23,7 +23,7 @@ O maior desafio desse projeto conhecer e realizá-lo com o framework [React.js](
 
 <div style="display: inline-block"  align="center"><br>
    <!-- <img height="150em" src="./src/assets/rosto.png" align="center" alt="Capa do projeto" > <br><br><br> -->
-   <img height="500em" src="./src/assets/lista-de-presença.gif" align="center" alt="desenvolvimento da aplicação" >
+   <img height="400em" src="./src/assets/lista-de-presença.gif" align="center" alt="desenvolvimento da aplicação" >
   
   <br><br>
 </div>
