@@ -17,7 +17,7 @@ Esse projeto consiste em criar uma lista interativa criando um Cartão de presen
 
 ### Desafio
 
-O maior desafio desse projeto conhecer e realizá-lo com o framework [React.js](https://reactjs.org/) como primeiro projeto. Utilizei meu HTML, CSS, Javascript de forma diferente nesse projeto.
+O maior desafio desse projeto conhecer e realizá-lo com a biblioteca [React.js](https://reactjs.org/) como primeiro projeto. Utilizei meu HTML, CSS, Javascript de forma diferente nesse projeto.
 
 ### Video
 
@@ -45,7 +45,7 @@ O maior desafio desse projeto conhecer e realizá-lo com o framework [React.js](
 
 ### Aprendizado
 
-O projeto consiste em uma aplicação React utilizando o Vite ao inivés de por padrão utilizar o "create-react-app".
+O projeto consiste em uma aplicação React utilizando o Vite ao invés de por padrão utilizar o "create-react-app".
 
 ```
 npm create vite@latest <nome do projeto>
